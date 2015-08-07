@@ -1,7 +1,7 @@
 {
   "name": "hubot-shortcut",
   "description": "A macro system for hubot",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Anish Athalye <me@anishathalye.com>",
   "license": "MIT",
   "keywords": "hubot, hubot-scripts",
