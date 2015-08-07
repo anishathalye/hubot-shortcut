@@ -22,8 +22,11 @@ module.exports = (robot) ->
     alias = res.match[1]
     cmds = config(alias)
     if cmds?
+      original = res.message.text
       cmds = cmds.split ';'
       for cmd in cmds
-        # create a new message
-        msg = new res.message.constructor(res.message.user, cmd)
-        robot.receive msg
+        # reuse existing message object
+        res.message.text = cmd
+        robot.receive res.message
+      # reset to original text
+      res.message.text = original
