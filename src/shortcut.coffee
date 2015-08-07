@@ -22,7 +22,7 @@ module.exports = (robot) ->
 
   config = require('hubot-conf')('shortcut', robot)
 
-  robot.hear /^!([a-z]+)/, (res) ->
+  robot.hear /^\s*!([a-z]+)/, (res) ->
     alias = res.match[1]
     cmds = config(alias)
     if cmds?
