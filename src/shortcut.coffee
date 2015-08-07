@@ -3,12 +3,16 @@
 #
 # Notes:
 #   hubot-shortcut uses hubot-conf for configuration. Macros can be configured
-#   by running a command like:
+#   by running a command like the following when hubot-conf is installed:
 #
-#       hubot conf set macro.test "hubot echo hello; hubot echo goodbye"
-#       hubot conf set macro.ls "hubot conf dump shortcut"
+#       hubot conf set shortcut.test "hubot echo hello; hubot echo goodbye"
+#       hubot conf set shortcut.list "hubot conf dump shortcut"
 #
-#   Macros can be used by typing "!<macro name>", like "!ls" for example.
+#   Macros can also be configured with environment variables like:
+#
+#       HUBOT_SHORTCUT_LIST="hubot conf dump shortcut"
+#
+#   Macros can be used by typing "!<macro name>", like "!list" for example.
 #
 # Author:
 #   anishathalye
