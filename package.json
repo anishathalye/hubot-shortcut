@@ -1,0 +1,19 @@
+{
+  "name": "hubot-shortcut",
+  "description": "A macro system for hubot",
+  "version": "1.0.0",
+  "author": "Anish Athalye <me@anishathalye.com>",
+  "license": "MIT",
+  "keywords": "hubot, hubot-scripts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anishathalye/hubot-shortcut"
+  },
+  "dependencies": {
+    "hubot-conf": "^1.0.0"
+  },
+  "peerDependencies": {
+    "hubot": "2.x"
+  },
+  "main": "index.coffee"
+}
