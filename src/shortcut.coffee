@@ -22,14 +22,17 @@ module.exports = (robot) ->
 
   config = require('hubot-conf')('shortcut', robot)
 
-  robot.hear /^\s*!([a-z]+)/, (res) ->
+  robot.hear /^\s*!([a-z]+)(\s+.*)?/, (res) ->
     alias = res.match[1]
+    rest = res.match[2]
     cmds = config(alias)
     if cmds?
       original = res.message.text
       cmds = cmds.split ';'
-      for cmd in cmds
+      for cmd, index in cmds
         # reuse existing message object
+        if rest? and index is cmds.length - 1
+          cmd = cmd + rest
         res.message.text = cmd
         robot.receive res.message
       # reset to original text
