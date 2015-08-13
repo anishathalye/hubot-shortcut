@@ -17,6 +17,12 @@
 # Author:
 #   anishathalye
 
+shallowClone = (obj) ->
+  copy = {}
+  for own key, value of obj
+    copy[key] = value
+  copy.__proto__ = obj.__proto__ # not standard in ECMAScript, but it works
+  return copy
 
 module.exports = (robot) ->
 
@@ -27,13 +33,10 @@ module.exports = (robot) ->
     rest = res.match[2]
     cmds = config(alias)
     if cmds?
-      original = res.message.text
       cmds = cmds.split ';'
       for cmd, index in cmds
-        # reuse existing message object
         if rest? and index is cmds.length - 1
           cmd = cmd + rest
-        res.message.text = cmd
-        robot.receive res.message
-      # reset to original text
-      res.message.text = original
+        msg = shallowClone(res.message)
+        msg.text = cmd
+        robot.receive msg
