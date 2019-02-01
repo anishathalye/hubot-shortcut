@@ -4,7 +4,7 @@
   "version": "1.0.5",
   "author": "Anish Athalye <me@anishathalye.com>",
   "license": "MIT",
-  "keywords": "hubot, hubot-scripts",
+  "keywords": ["hubot, hubot-scripts"],
   "repository": {
     "type": "git",
     "url": "https://github.com/anishathalye/hubot-shortcut"
