@@ -5,7 +5,8 @@
   "author": "Anish Athalye <me@anishathalye.com>",
   "license": "MIT",
   "keywords": [
-    "hubot, hubot-scripts"
+    "hubot",
+    "hubot-scripts"
   ],
   "repository": {
     "type": "git",
@@ -17,5 +18,5 @@
   "peerDependencies": {
     "hubot": "2.x || 3.x"
   },
-  "main": "index.coffee"
+  "main": "index.js"
 }
