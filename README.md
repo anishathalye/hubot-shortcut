@@ -61,7 +61,7 @@ hello!
 
 ## License
 
-Copyright (c) 2015-2016 Anish Athalye. Released under the MIT License. See
+Copyright (c) 2015-2019 Anish Athalye. Released under the MIT License. See
 [LICENSE.md][license] for details.
 
 [license]: LICENSE.md
