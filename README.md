@@ -5,7 +5,7 @@ recursive macro expansion. hubot-shortcut is fully configurable via chat.
 
 ## Demo
 
-![Demo](https://raw.githubusercontent.com/anishathalye/hubot-shortcut/docs/demo.png)
+![Demo](https://raw.githubusercontent.com/anishathalye/assets/master/hubot-shortcut/demo.png)
 
 ## Installation
 
